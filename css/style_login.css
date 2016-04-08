@@ -1,0 +1,127 @@
+body {
+	background: #25D5F2 url(../images/happy-people.jpg) ;
+	font-size: 87.5%;
+	font-family:arial, sans-serif;
+	color: #666666;
+	line-height:1em;
+	text-align:left;
+}
+
+h1{
+	font-size: 200%;
+	color: #008CBA;
+	text-align: center;
+}
+
+input {
+	width: 100%;
+	border: 2px solid #008CBA;
+}
+
+#button {
+	margin-top: 3%;
+	margin-left: 33%;
+	background-color: #008CBA; 
+    border: 2px solid #008CBA;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+	width: 35%;
+}
+
+#button:hover {
+    background-color: white;
+    color: black;
+	border: 2px solid #008CBA;
+}
+
+.clr{
+	clear: both;
+}
+
+a{
+		text-decoration: none;
+		color: #1342ec;
+}
+
+a:hover {
+	color: #666666;
+}
+
+#nav_logo{
+	margin: 05%;
+	margin-left: 10%;
+}
+
+#container{
+	width: 80%;
+	margin: 0 auto;
+	overflow: auto;
+	clear: both;
+}
+
+#user_login {
+	margin-top: 9%;
+	width: 40%;
+	float: left;
+	overflow: auto;
+	transition: width 1s;
+	margin-left: 30%;
+}
+
+#user_login section {
+	border-radius:5px;
+	background: #ffffff;
+	overflow: auto;
+	padding: 10px 20px;
+	margin-top:10px;
+	margin-right: 10px;
+}
+
+footer{
+	margin-left: 25%;
+	width: 50%;
+	background: #0D70B1;
+	height: 40px;
+	border: 1px solid #1342ec;
+	margin-top: 10px;
+	border-radius: 4px;
+}
+
+footer p {
+	color: #ffffff;
+	margin: 0;
+	padding: 10px 0 0 0;
+	text-align: center;
+}
+
+/*media query for tablet (Portrait and Landscape)*/
+@media only screen and (min-width : 768px) and (max-width : 960px) {
+	#container{
+		width: 95%;
+	}
+}
+
+/*media query for small tablet (Portrait and Landscape)*/
+@media only screen and (min-width : 569px) and (max-width : 767px) {
+	#container{
+		width: 95%;
+	}
+
+	
+}
+
+/*Smart phone width*/
+@media only screen and (min-width : 240px) and (max-width : 569px) {
+	#container{
+		width: 95%;
+	}
+	
+}
+
