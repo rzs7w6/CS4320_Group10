@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add user info</title>
+    <style>
+        input{
+            width: 25%;
+            height:30px;
+        }
+        textarea{
+            vertical-align: top;
+        }
+        input[type='submit']{
+            width: 80px;
+        }
+        .div{
+            text-align: right;
+
+        }
+        a{
+            margin-right: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="div">
+        <a href="index.php">Home</a>
+    </div>
+    <form method="post" action="add_user_info.php">
+        <div>User Name <input type='text' name='real_name'></div>
+        <div>Job Name <input type='text' name='w_name'></div>
+        <div>Job space <input type='text' name='w_space'></div>
+        <div>School space <input type='text' name='s_space'></div>
+        <div>School Name <input type='text' name='s_name'></div>
+        <div>School Start date <input type='date' name='s_s_date'></div>
+        <div>School End date <input type='date' name='s_e_date'></div>
+        <div>Experience Job name <input type='text' name='e_w_name'></div>
+        <div>Experience Job Space <input type='text' name='e_w_space'></div>
+        <div>Experience Start date <input type='date' name='e_s_date'></div>
+        <div>Experience end date <input type='date' name='e_e_date'></div>
+        <div>Languages<select  name='languages'>
+            <option value="english">english</option>
+            <option value="chinese">chinese</option>
+
+        </select></div>
+        <div>Degree<select  name='degree'>
+            <option value="本科以下">本科以下</option>
+            <option value="本科">本科</option>
+            <option value="硕士">硕士</option>
+            <option value="博士">博士</option>
+
+        </select></div>
+        <div>Skills <textarea rows="20" cols="70" name="skills"></textarea></div>
+
+        <div>Telphone <input type="tel" name="tel" ></div>
+        <div><input type="submit" value="Add"></div>
+    </form>
+</div>
+
+</body>
+</html>
