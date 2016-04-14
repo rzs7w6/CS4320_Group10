@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+        input[]{
+            width: 25%;
+            height: 40px;
+        }
+        .center{
+            text-align: center;;
+        }
+        .right{
+            text-align: right;
+        }
+        .right :hover{
+            text-decoration: none;
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="right">
+    <h4><a href="register.html">Register</a></h4>
+</div>
+<div class="center">
+    <form method="post" action="login.php">
+        <div>User Name<input type="text" name="user_name" placeholder="user_name"></div>
+        <div>User Password <input type="password" name="password"></div>
+        <div>User Type Admin <input type="radio" value="1" name="type" checked> User <input value="2" type="radio" name="type"> Company <input value="3" type="radio" name="type">
+        </div><div><input type="submit" value="Login"></div>
+    </form>
+</div>
+</body>
+</html>
