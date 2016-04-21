@@ -1,0 +1,85 @@
+html {
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("/img/index-bg.jpg") top no-repeat;
+    background-size: 100%;
+}
+#main {
+    width: 40%;
+    margin: auto auto;
+    margin-top: 10%;
+}
+#imgHeader {
+    display: block;
+    text-align: center;
+    margin: auto auto;
+    width: 80%;
+}
+form {
+    margin-top: 30px;
+    text-align: center;
+}
+input[type=text] {
+    border: none;
+    padding-left: 45px !important;
+    padding: 10px;
+    color: white;
+    background: url("/img/login-username.png") left no-repeat;
+    background-size: 100%;
+}
+input[type=password] {
+    border: none;
+    padding-left: 45px !important;
+    padding: 10px;
+    color: white;
+    background: url("/img/login-password.png") left no-repeat;
+    background-size: 100%;
+}
+::-webkit-input-placeholder {
+    color: white;
+}
+#inputForm {
+    font-size: 13px;
+    color: white;
+}
+
+#inputForm > input {
+    margin-bottom: 10px !important;
+    margin: auto auto;
+    width: auto;
+}
+input[type=submit] {
+    text-align: center;
+    border: none;
+    padding: 16px;
+    background-color: #f96332;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    width: 47% !important;
+}
+#footer {
+    font-weight: bold;
+    color: white;
+    font-size: 13px;
+    margin: auto auto;
+    width: 40%;
+}
+#footer a {
+    color: inherit;
+    text-decoration: none;
+}
+/*input[]{
+    width: 25%;
+    height: 40px;
+}
+.center{
+    text-align: center;;
+}
+.right{
+    text-align: right;
+}
+.right :hover{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}*/

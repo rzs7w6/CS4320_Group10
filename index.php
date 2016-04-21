@@ -1,69 +1,10 @@
-
-
+<html>
+<head>
+    <title>Super LinkedIn</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
 <style>
-    body{
-        margin: 0px;
-        padding:0px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    h1{
-        text-align: center;
-        margin-top: 20px;
-
-    }
-    h3{
-        text-align: left;
-    }
-    input[type='checkbox']{
-        margin-left: 10px;
-    }
-    a:hover{
-        cursor: pointer;
-        text-decoration: none;
-    }
-    input[type='text']{
-        width: 25%;
-        height:30px;
-    }
-    .right{
-        text-align: right;
-    }
-    .right :hover{
-        text-decoration: none;
-    }
-    a{
-        text-decoration: none;
-    }
-    label{
-        margin-left: 3px;
-        /*background-color: aquamarine;*/
-        /*border: 1px solid wheat;*/
-    }
-    .left{
-        float: left;
-        border: 1px solid olivedrab;
-        width: 20%;
-        height:300px;
-        /*background-color: red;*/
-    }
-    .not-fri{
-        float: right;
-        border: 1px solid;
-        width: 20%;
-        height: 300px;
-    }
-    .center{
-        float: left;
-        border: 1px solid;
-        width: 50%;
-        margin-left: 5%;
-        height: 300px;
-    }
-    .left-dis{
-        margin-left: 30px;
-        line-height: 20px;
-    }
+ 
 
 </style>
 
@@ -79,6 +20,12 @@
     <a href="logout.php">Logout</a></h4>
 </div>
 <h1>Home page</h1>
+<?php
+    if(empty($_COOKIE['user_id'])){
+        echo "<h3>You are not currently logged in. <a href='login.html'>Please login first.</a></h3>";
+        exit;
+    }
+?>
 <h3>Search</h3>
 <form method="post" action="index.php">
     <?php
@@ -100,13 +47,6 @@
  * Time: 10:25
  */
 require_once ("SqlUtiles.php");
-
-
-
-if(empty($_COOKIE['user_id'])){
-    echo "<h3>You are not currently login. <a href='login.html'>Please login first.</a></h3>";
-    exit;
-}
 
 if(!empty($_COOKIE['role_type'])){
     $utils=new SqlUtils();
@@ -211,4 +151,4 @@ if(!empty($_COOKIE['role_type'])){
 
 ?>
 
-
+</html>

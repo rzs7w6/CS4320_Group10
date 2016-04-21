@@ -20,7 +20,7 @@ require_once ("SqlUtiles.php");
 
 
 if(empty($_POST['user_name'])||empty($_POST['password'])){
-    echo "<script>alert('User ID and password cannot be empty');parent.location.href='login.html'; </script>";
+    echo "<script>alert('You must enter both a username and password');parent.location.href='login.html'; </script>";
     exit;
 }
 
@@ -31,7 +31,7 @@ if($res){
     exit;
 }
 
-echo "<script>alert('User ID or password are wrong, please try again');parent.location.href='login.html'; </script>";
+echo "<script>alert('Incorrect User ID or password, please try again');parent.location.href='login.html'; </script>";
 exit;
 
 ?>

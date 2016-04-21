@@ -1,0 +1,63 @@
+body{
+    margin: 0px;
+    padding:0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+
+}
+h3{
+    text-align: left;
+}
+input[type='checkbox']{
+    margin-left: 10px;
+}
+a:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type='text']{
+    width: 25%;
+    height:30px;
+}
+.right{
+    text-align: right;
+}
+.right :hover{
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+label{
+    margin-left: 3px;
+    /*background-color: aquamarine;*/
+    /*border: 1px solid wheat;*/
+}
+.left{
+    float: left;
+    border: 1px solid olivedrab;
+    width: 20%;
+    height:300px;
+    /*background-color: red;*/
+}
+.not-fri{
+    float: right;
+    border: 1px solid;
+    width: 20%;
+    height: 300px;
+}
+.center{
+    float: left;
+    border: 1px solid;
+    width: 50%;
+    margin-left: 5%;
+    height: 300px;
+}
+.left-dis{
+    margin-left: 30px;
+    line-height: 20px;
+}
