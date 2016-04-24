@@ -20,12 +20,7 @@
     <a href="logout.php">Logout</a></h4>
 </div>
 <h1>Home page</h1>
-<?php
-    if(empty($_COOKIE['user_id'])){
-        echo "<h3>You are not currently logged in. <a href='login.html'>Please login first.</a></h3>";
-        exit;
-    }
-?>
+
 <h3>Search</h3>
 <form method="post" action="index.php">
     <?php
@@ -47,6 +42,10 @@
  * Time: 10:25
  */
 require_once ("SqlUtiles.php");
+
+if(empty($_COOKIE['user_id'])){
+    header("Location: login.html");
+}
 
 if(!empty($_COOKIE['role_type'])){
     $utils=new SqlUtils();

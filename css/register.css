@@ -1,0 +1,93 @@
+html {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("/img/index-bg.jpg") top no-repeat;
+    background-size: 100%;
+}
+#main {
+    width: 40%;
+    margin: auto auto;
+    margin-top: 10%;
+}
+#main > h1 {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+#header {
+    position: absolute;
+    font-weight: bold;
+    font-size: 15px;
+    top: 8px;
+    right: 8px;
+}
+#header a,a:visited {
+    color: white;
+    text-decoration: none;
+}
+#register_progress {
+    display: block;
+    text-align: center;
+    margin: auto auto;
+    width: 100%;
+}
+form {
+    text-align: center;
+    margin: 10px;
+}
+#footer {
+    color: white;
+    font-size: 11px;
+    margin: auto auto;
+    text-align: center;
+    width: 40%;
+}
+#footer > a {
+    text-decoration: none;
+    color: white;
+}
+#footer > a:visited {
+    text-decoration: none;
+    color: white;
+}
+input[type=text] {
+    border: none;
+    padding-left: 45px !important;
+    padding: 10px;
+    color: white;
+    background: url("/img/login-username.png") left no-repeat;
+    background-size: 100%;
+}
+input[type=password] {
+    border: none;
+    padding-left: 45px !important;
+    padding: 10px;
+    color: white;
+    background: url("/img/login-password.png") left no-repeat;
+    background-size: 100%;
+}
+input[type=email] {
+    border: none;
+    padding-left: 45px !important;
+    padding: 10px;
+    color: white;
+    background: url("/img/login-email.png") left no-repeat;
+    background-size: 100%;
+}
+input[type=submit] {
+    text-align: center;
+    border: none;
+    padding: 16px;
+    background-color: white;
+    border-radius: 30px;
+    font-weight: bold;
+    width: 47% !important;
+}
+::-webkit-input-placeholder {
+    color: white;
+}
+#register_form {
+    color: white;
+    font-size: 13px;
+}
+#register_form > input {
+    margin-bottom: 10px !important;
+}

@@ -2,34 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
-    <style>
-        div{
-            margin-top: 20px;
-        }
-        input[]{
-            width: 25%;
-            height: 40px;
-        }
-        .center{
-            text-align: center;;
-        }
-        .right{
-            text-align: right;
-        }
-        .right :hover{
-            text-decoration: none;
-        }
-        a{
-            text-decoration: none;
-        }
-        input[type='submit']{
-            cursor: pointer;
-        }
-    </style>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css"/>
 </head>
 <body>
-<div class="right">
+    <div id="header">
+        <a href="login.html">Login</a>
+    </div>
+    <div id="main">
+        <img id="register_progress" src="img/registerProgress.png"/>
+        <h1>Create Account</h1>
+        <form id="register_form" method="post" action="register.php"><br/>
+            <input type="text" name="user_name" placeholder="Username"/><br/>
+            <input type="password" name="password" placeholder="Password"/><br/>
+            <input type="email" name="email" placeholder="mail@example.com"/><br/>
+            <input type="radio" name="type" value="2" checked/> User <input type="radio" name="type" value="3"/> Company<br/>
+            <input type="submit" value="Register"/>
+        </form>
+    </div>
+    <div id="footer">
+        <a href="">Terms &amp; Conditions</a>
+    </div>
+<!--<div class="right">
     <h4><a href="login.html">Login</a></h4>
 </div>
 <div class="center">
@@ -40,6 +34,6 @@
         <div>User Type User <input value="2" type="radio" name="type" checked> Company <input value="3" type="radio" name="type">
         </div><div><input type="submit" value="Register"></div>
     </form>
-</div>
+</div>-->
 </body>
 </html>
