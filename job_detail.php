@@ -58,7 +58,7 @@ Job Tel: &nbsp;&nbsp;<strong>$res[tel]</strong>
 
 Job Publish Date: &nbsp;&nbsp;<strong>$res[pub_date]</strong>
 <br>";
-        echo "<a href='employee.php?c_id=$_GET[c_id]' class='employee'>The job you want apply</a>
+        echo "<a href='employee.php?c_id=$_GET[c_id]' class='employee'>Apply for Job</a>
 
 </div>";
     }

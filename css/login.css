@@ -57,11 +57,12 @@ input[type=submit] {
     width: 47% !important;
 }
 #footer {
+    position: relative;
     font-weight: bold;
     color: white;
     font-size: 13px;
     margin: auto auto;
-    width: 40%;
+    width: 50%;
 }
 #footer a {
     color: inherit;
