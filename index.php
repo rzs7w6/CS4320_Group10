@@ -115,12 +115,10 @@ if(!empty($_COOKIE['role_type'])){
                                 $com_name=$com[$c_id];
                                 echo"<div>Time: <strong>$r[com_date]</strong> complainer:<strong>$user_name[user_name]&nbsp; &nbsp; &nbsp;</strong> Complaineed:  &nbsp; &nbsp; &nbsp;<strong>$com_name[com_name]</strong><div><label>Content:</label><textarea rows='20' cols='70'>$r[content]</textarea></div></div>";
                             }
-                        } 
-                        if(isset($res['complain'])) {
-                            echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
-                            echo 'No complaints.';
-                            echo '</div>';
                         }
+                        echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
+                        echo 'No more complaints to show.';
+                        echo '</div>';
                     ?>
                 <div>
                 <div class="row">
@@ -186,11 +184,6 @@ if(!empty($_COOKIE['role_type'])){
                         <h3 class="ui dividing header">Friends</h3>
                         <ul>
                         <?php
-                        if(isset($res['fri'])) {
-                            echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
-                            echo 'No friend requests.';
-                            echo '</div>';
-                        } else {
                             foreach($res['fri'] as $r){
                                 echo "<li value='$r[id]'>$r[user_name]";
                                 if($r['is_read']==0){
@@ -201,7 +194,9 @@ if(!empty($_COOKIE['role_type'])){
                                 }
                                 echo "<br><a href='chat.php?to_id=$r[from_id]&from_id=$_COOKIE[user_id]&to_name=$r[user_name]' class='left-dis'>Send notice</a></li>";
                             }
-                        }
+                            echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
+                            echo 'No more friend requests to show.';
+                            echo '</div>';
                         ?>
                         </ul>
                     </div>
@@ -209,15 +204,12 @@ if(!empty($_COOKIE['role_type'])){
                         <h3 class="ui dividing header">Company Messages</h3>
                         <ul>
                         <?php
-                        if(isset($res['fri'])) {
-                            echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
-                            echo 'No company messages.';
-                            echo '</div>';
-                        } else {
                             foreach ($res['c_u'] as $r) {
                                 echo "<li value='$r[from_id]'>$r[content]";
                             }
-                        }
+                            echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
+                            echo 'No more company messages to show.';
+                            echo '</div>';
                         ?>
                         </ul>
                     </div>
@@ -241,16 +233,13 @@ if(!empty($_COOKIE['role_type'])){
                     <h3 class="ui dividing header">People You May Know</h3>
                     <ul>
                     <?php
-                    if(isset($res['not_fri'])) {
-                        echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
-                        echo 'No results.';
-                        echo '</div>';
-                    } else {
                         foreach ($res['not_fri'] as $r) {
                             echo "<li value='$r[u_id]'>$r[real_name]";
                             echo "<a href='add_friend.php?to_id=$r[u_id]' class='left-dis'>Add</a></li>";
                         }
-                    }
+                        echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
+                        echo 'No more friend requests to show.';
+                        echo '</div>';
                     ?>
                     </ul>
                 </div>
@@ -279,16 +268,13 @@ if(!empty($_COOKIE['role_type'])){
                     <h3 class="ui dividing header">User Messages</h3>
                     <ul class="ui list">
                         <?php
-                        if(isset($res['u_c'])) {
-                            echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
-                            echo 'No messages.';
-                            echo '</div>';
-                        } else {
                             foreach($res['u_c'] as $r) {
     
                                 echo '<li value="'.$r[from_id].'">'.$r[content].'</li>';
                             }
-                        }
+                            echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
+                            echo 'No more messages to show.';
+                            echo '</div>';
                         ?>
                     </ul>
                 </div>
