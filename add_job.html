@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Add job</title>
-    <style>
-        input{
-            width: 25%;
-            height:30px;
-        }
-        textarea{
-            vertical-align: top;
-        }
-        input[type='submit']{
-            width: 80px;
-        }
-    </style>
+    <title>Super LinkedIn</title>
+    <link rel="stylesheet" type="text/css" href="css/index2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/forms.css"/>
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css"/>
 </head>
 <body>
-<div>
-    <form method="post" action="add_job.php">
-        <div>Job name <input type='text' name='w_name'></div>
-        <div>Description <textarea rows="20" cols="70" name="description"></textarea></div>
-        <div>Telphone <input type="tel" name="tel" ></div>
-        <div>Email <input type="email" name="email"></div>
-        <div>Publish Date <input type="date" name="pub_date"> </div>
-        <div><input type="submit" value="Add"></div>
-    </form>
-</div>
+    <div class="ui fixed menu">
+        <div class="header item">Super LinkedIn</div>
+        <div class="right menu">
+            <a class="item" href="index.php">Home</a>
+            <a class="item" href="logout.php">Logout</a>
+        </div>
+    </div>
+    <div id="main_content">
+        <div style="width: 45%; margin: auto auto">
+            <h1 class="ui dividing header" style="text-align: left">Add Job</h1>
+            <form class="ui form" method="post" action="add_job.php">
+                <input class="ui input" type='text' name='w_name' placeholder="Job Name"/><br/><br/>
+                <textarea rows="20" cols="70" name="description" placeholder="Descrption"></textarea><br/><br/>
+                <label>Telephone</label>
+                <input type="tel" name="tel" placeholder="555-555-5555"><br/><br/>
+                <label>Email</label>
+                <input type="email" name="email" placeholer="Email"/><br/><br/>
+                <label>Job Publish Date</label>
+                <input type="date" name="pub_date"><br/><br/>
+                <input type="submit" class="ui primary fluid button" value="Add job">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
