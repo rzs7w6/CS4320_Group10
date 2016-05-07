@@ -1,44 +1,21 @@
-<style>
-    textarea{
-        vertical-align: top;
-    }
-    strong{
-        color: saddlebrown;
-    }
-    .right{
-        text-align: right;
-    }
-    .right :hover{
-        text-decoration: none;
-    }
-    a{
-        text-decoration: none;
-    }
-    .employee{
-        /*border: 1px solid;*/
-        border-radius: 0px 2px;
-        display: block;
-        width:90px;
-        height: 30px;
-        line-height: 30px;
-        text-decoration: none;
-        background-color: lightgoldenrodyellow;
-        color: black;
-        text-align: center;
-    }
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Super LinkedIn</title>
+    <link rel="stylesheet" type="text/css" href="css/index2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/forms.css"/>
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css"/>
+</head>
+<body>
+    <div class="ui fixed menu">
+        <div class="header item">Super LinkedIn</div>
+        <div class="right menu">
+            <a class="item" href="index.php">Home</a>
+            <a class="item" href="logout.php">Logout</a>
+        </div>
+    </div>
+    <div id="main_content">
 <?php
-if(!empty($_COOKIE['role_type'])&&$_COOKIE['role_type']==2){
-    echo "<div class='right'><h4><a href=\"contact_user.php?u_id=$_GET[c_id]\">Contact US</a> | <a href=\"index.php\">Home</a>|<a href='add_complain.php?c_id=$_GET[c_id]'>Complain</a>|<a href=\"add_user_info.html\">Add User info</a></h4></div>";
-}
-?>
-<?php
-/**
- * Created by PhpStorm.
- * User: baidu
- * Date: 16/4/3
- * Time: 01:17
- */
 require_once ("SqlUtiles.php");
 
 if(!empty($_GET['j_id'])){
@@ -47,19 +24,79 @@ if(!empty($_GET['j_id'])){
     $res=$util->query_job_by_id($_GET['j_id']);
     if($res->rowCount()>0){
         $res=$res->fetch();
-        echo "<div><span>Job Name:&nbsp;&nbsp;</span> <strong>$res[w_name]</strong>
-<br>
-Job description: &nbsp;&nbsp;<textarea rows='10' cols='40' disabled>$res[description]</textarea>
-<br>
-Job Email: &nbsp;&nbsp;<strong>$res[email]</strong>
-<br>
-Job Tel: &nbsp;&nbsp;<strong>$res[tel]</strong>
-<br>
-
-Job Publish Date: &nbsp;&nbsp;<strong>$res[pub_date]</strong>
-<br>";
-        echo "<a href='employee.php?c_id=$_GET[c_id]' class='employee'>Apply for Job</a>
-
-</div>";
     }
 }
+
+?>
+        <div>
+            <div class="ui two column grid">
+                <div class="column">
+                    <h3 class="ui dividing header">Job Information</h3>
+                    <form class="ui form">
+                    <div class="field">
+                        <label>Job Name</label>
+                        <?php
+                        echo '<input type="text" name="first-name" value="'.$res[w_name].'" disabled class="disabled">';
+                        ?>
+                    </div>
+                    <div class="field">
+                        <label>Description</label>
+                        <?php
+                        echo "<textarea rows='10' cols='40' disabled class='disabled'>$res[description]</textarea>";
+                        ?>
+                    </div>
+                    <div class="field">
+                        <label>Email</label>
+                        <?php
+                        echo '<input type="text" name="first-name" value="'.$res[email].'" disabled class="disabled">';
+                        ?>
+                    </div>
+                    <div class="field">
+                        <label>Telephone</label>
+                        <?php
+                        echo '<input type="text" name="first-name" value="'.$res[tel].'" disabled class="disabled">';
+                        ?>
+                    </div>
+                    <div class="field">
+                        <label>Job Publication Date</label>
+                        <?php
+                        echo '<input type="date" name="first-name" value="'.$res[pub_date].'" disabled class="disabled">';
+                        ?>
+                    </div>
+                    <a href='employee.php?c_id=<?php echo($_GET[c_id]); ?>' class='ui primary fluid button'>Apply for Job</a>
+                </div>
+                <div class="column">
+                    <h3 class="ui dividing header">Your Tools</h3>
+                    <ul class="ui list">
+                    <?php
+                    if(!empty($_COOKIE['role_type'])&&$_COOKIE['role_type']==2) {
+                    ?>
+                        <div class="item">
+                            <i class="right triangle icon"></i>
+                            <a class="content" href="index.hp">Return Home</a>
+                        </div>
+                        <div class="item">
+                            <i class="right triangle icon"></i>
+                            <a class="content" href="add_job.html">Contact Company</a>
+                        </div>
+                        <div class="item">
+                            <i class="right triangle icon"></i>
+                            <a class="content" href="add_job.html">Contact Administrator</a>
+                        </div>
+                        <div class="item">
+                            <i class="right triangle icon"></i>
+                            <a class="content" href="add_job.html">Update your information for this application</a>
+                        </div>
+                    <?php
+                    } else {
+                        echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
+                        echo 'No tools to show.';
+                        echo '</div>';
+                    }
+                    ?>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
