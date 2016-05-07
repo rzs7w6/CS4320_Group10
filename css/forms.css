@@ -1,0 +1,18 @@
+input:disabled::-webkit-input-placeholder { /* WebKit browsers */
+    color:    black;
+}
+input:disabled:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    black;
+}
+input:disabled::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    black;
+}
+input:disabled:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    black;
+}
+input[type="text"][disabled] {
+   color: black;
+}
+.disabled {
+    color: black !important;
+}
