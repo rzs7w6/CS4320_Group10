@@ -39,10 +39,27 @@ catch(PDOException $e)
         -ms-user-select: none;
     }
     </style>
+    <style>
+	a:link, a:visited {
+	    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+	    background-color: #ffffff;
+	    color: black;
+	    padding: 14px 25px;
+	    text-align: center;	
+	    text-decoration: none;
+	    display: inline-block;
+	    border-radius: 25px;
+	}
+
+
+	a:hover, a:active {
+	    background-color: white;
+	}
+    </style>
 
 </head>
 <body>
-    <a href="login.html" style="position: absolute; left: 10; color: white;">Return to login</a>
+    <div style="border-radius: 25px; padding:10px; margin-left: -90%; text-align:center"><a href="index.php" style="">Return to home</a></div>
     <div id="main2" style="position: absolute; left: 25%; margin-top: 05%">
     <img id="imgHeader" src="img/logo.png" style="width:50%; margin-bottom: 5%;"alt="Super LinkedIn"/>
     <div id="container" style="background-color: rgba(255,255,255,0.95); border-radius: 25px; margin-bottom: 10%;">
