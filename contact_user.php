@@ -16,7 +16,7 @@
     </div>
     <div id="main_content">
             <div style="width: 45%; margin: auto auto">
-                    <h1 class="ui dividing header">Contact user</h3>
+                    <h1 class="ui dividing header" style="text-align: left">Contact user</h3>
                     <form action="contact_user.php" method="post">
                     <?php
                         echo "<input type=\"hidden\" name=\"to_id\" value='$_GET[u_id]'>";
@@ -45,4 +45,3 @@ if(!empty($_POST['notice'])){
 }
 ?>
 </body>
-</html>

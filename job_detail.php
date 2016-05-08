@@ -73,19 +73,19 @@ if(!empty($_GET['j_id'])){
                     ?>
                         <div class="item">
                             <i class="right triangle icon"></i>
-                            <a class="content" href="index.hp">Return Home</a>
+                            <a class="content" href="index.php">Return Home</a>
                         </div>
                         <div class="item">
                             <i class="right triangle icon"></i>
-                            <a class="content" href="add_job.html">Contact Company</a>
+                            <a class="content" href="contact_user.php?u_id=<?php echo($_GET[c_id]); ?>">Contact Company</a>
                         </div>
                         <div class="item">
                             <i class="right triangle icon"></i>
-                            <a class="content" href="add_job.html">Contact Administrator</a>
+                            <a class="content" href="add_complain.php?c_id=<?php echo($_GET[c_id]); ?>">Contact Administrator</a>
                         </div>
                         <div class="item">
                             <i class="right triangle icon"></i>
-                            <a class="content" href="add_job.html">Update your information for this application</a>
+                            <a class="content" href="add_user_info.html">Update your information for this application</a>
                         </div>
                     <?php
                     } else {

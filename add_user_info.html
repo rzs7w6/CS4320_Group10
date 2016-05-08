@@ -1,64 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Add user info</title>
-    <style>
-        input{
-            width: 25%;
-            height:30px;
-        }
-        textarea{
-            vertical-align: top;
-        }
-        input[type='submit']{
-            width: 80px;
-        }
-        .div{
-            text-align: right;
-
-        }
-        a{
-            margin-right: 20px;
-            text-decoration: none;
-        }
-    </style>
+    <title>Super LinkedIn</title>
+    <link rel="stylesheet" type="text/css" href="css/index2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/forms.css"/>
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css"/>
 </head>
 <body>
-<div>
-    <div class="div">
-        <a href="index.php">Home</a>
+    <div class="ui fixed menu">
+        <div class="header item">Super LinkedIn</div>
+        <div class="right menu">
+            <a class="item" href="index.php">Home</a>
+            <a class="item" href="logout.php">Logout</a>
+        </div>
     </div>
-    <form method="post" action="add_user_info.php">
-        <div>User Name <input type='text' name='real_name'></div>
-        <div>Job Name <input type='text' name='w_name'></div>
-        <div>Job space <input type='text' name='w_space'></div>
-        <div>School space <input type='text' name='s_space'></div>
-        <div>School Name <input type='text' name='s_name'></div>
-        <div>School Start date <input type='date' name='s_s_date'></div>
-        <div>School End date <input type='date' name='s_e_date'></div>
-        <div>Experience Job name <input type='text' name='e_w_name'></div>
-        <div>Experience Job Space <input type='text' name='e_w_space'></div>
-        <div>Experience Start date <input type='date' name='e_s_date'></div>
-        <div>Experience end date <input type='date' name='e_e_date'></div>
-        <div>Languages<select  name='languages'>
-            <option value="english">english</option>
-            <option value="chinese">chinese</option>
+    <div id="main_content">
+        <div style="width: 45%; margin: auto auto">
+            <h1 class="ui dividing header" style="text-align: left">Edit Your Application</h1>
+            <form class="ui form" method="post" action="add_user_info.php">
+                User Name <input type='text' name='real_name'>
+                Job Name <input type='text' name='w_name'>
+                Job space <input type='text' name='w_space'>
+                School space <input type='text' name='s_space'>
+                School Name <input type='text' name='s_name'>
+                School Start date <input type='date' name='s_s_date'>
+                School End date <input type='date' name='s_e_date'>
+                Experience Job name <input type='text' name='e_w_name'>
+                Experience Job Space <input type='text' name='e_w_space'>
+                Experience Start date <input type='date' name='e_s_date'>
+                Experience end date <input type='date' name='e_e_date'>
+                Languages<select  name='languages'>
+                    <option value="english">English</option>
+                    <option value="chinese">Chinese</option>
 
-        </select></div>
-        <div>Degree<select  name='degree'>
-            <option value="本科以下">本科以下</option>
-            <option value="本科">本科</option>
-            <option value="硕士">硕士</option>
-            <option value="博士">博士</option>
+                </select>
+                Degree<select  name='degree'>
+                    <option value="本科以下">本科以下</option>
+                    <option value="本科">本科</option>
+                    <option value="硕士">硕士</option>
+                    <option value="博士">博士</option>
 
-        </select></div>
-        <div>Skills <textarea rows="20" cols="70" name="skills"></textarea></div>
-
-        <div>Telphone <input type="tel" name="tel" ></div>
-        <div><input type="submit" value="Add"></div>
-    </form>
-</div>
-
+                </select>
+                Skills <textarea rows="20" cols="70" name="skills"></textarea>
+                Telephone <input type="tel" name="tel" ><br/><br/>
+                <input type="submit" class="ui primary fluid button" value="Update Information">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
