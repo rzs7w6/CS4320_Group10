@@ -195,7 +195,7 @@ if(!empty($_COOKIE['role_type'])){
                                 echo "<br><a href='chat.php?to_id=$r[from_id]&from_id=$_COOKIE[user_id]&to_name=$r[user_name]' class='left-dis'>Send notice</a></li>";
                             }
                             echo '<div class="ui basic segment" id="company_messages_empty" style="color: grey; font-size: 15px; font-weight: bold">';
-                            echo 'No more friend requests to show.';
+                            echo 'No more friends to show.';
                             echo '</div>';
                         ?>
                         </ul>
